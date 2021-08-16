@@ -44,6 +44,7 @@
     },
         offset: '-50%'
     });
+/*
     new Waypoint({
         element: document.getElementById('inpageNav'),
         handler: function(direction) {
@@ -55,8 +56,8 @@
             }
         },
             offset: '5%'
-        })
-
+        });
+*/
 
        
 
