@@ -1894,10 +1894,14 @@ li a:hover,
   color: #000 !important;
   -webkit-transition: 500ms;
   transition: 500ms;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #f00 !important;
 }
 .activeLink,
-nav a:hover {
-  border-bottom-color: #000 !important;
+.activeLink:hover {
+  color: #000 !important;
 }
 nav a {
   font-weight: 500 !important;
