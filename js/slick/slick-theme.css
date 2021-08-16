@@ -193,7 +193,7 @@
     text-align: center;
 
     opacity: .1;
-    color: lightslategray;
+    color: grey;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -201,5 +201,5 @@
 .slick-dots li.slick-active button:before
 {
     opacity: .5;
-    color: lightslategray;
+    color: grey;
 }
