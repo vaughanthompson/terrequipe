@@ -1831,7 +1831,6 @@ div.slideTextOverlay {
   letter-spacing: -0.05em;
   font-weight: 600;
   padding: 0;
-  border: 1px solid #0ff;
 }
 body.lightSlider div.slideTextOverlay {
   color: #000;
@@ -1841,7 +1840,6 @@ body.darkSlider div.slideTextOverlay {
 }
 div.brandCarousel {
   padding: 2vw;
-  border: 1px solid #0ff;
 }
 a:link,
 a:visited {
