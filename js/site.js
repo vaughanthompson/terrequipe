@@ -73,6 +73,30 @@
     });
 
 
+    $(".slickBrands").slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows:true,
+        dots:false,
+        fade:false,
+        speed:1000,
+        responsive: [
+            {
+              breakpoint: 1100,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+              }
+            }
+        ]
+    });
+
+    $(".slickBrands").show();
+
+
     
 
 
