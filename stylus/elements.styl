@@ -105,6 +105,7 @@ nav a.ctaButton
     margin-right: marXS
     margin-bottom: 0
     padding:padXXS*.75 padXS
+    white-space: nowrap
 
 a.ctaButton i
     margin-left:15px 
@@ -688,8 +689,9 @@ div.brandCarousel div.slickItem > a
     border-bottom:3px solid brand1
     outline: none;
     transition: 0.5s
-div.brandCarousel div.slickItem > a:hover
-    margin-top:6px;
+@media (pointer: fine)    
+    div.brandCarousel div.slickItem > a:hover
+        margin-top:6px;
 div.brandCarousel div.slickItem > a > div:last-child 
     flex-basis:20px
     margin-left:20px
@@ -724,36 +726,101 @@ div.slickBrands // use to hide and then js to show to mitigate FOUC
 
 /* dropdown containers */
 a.ddownClose 
-    padding: 10px
-    background-color: lightGrey
+    padding: 0
     display: inline-block
     position: absolute
-    top: marXXS
-    right: marXXSt
+    top: marXS
+    right: marStd
+a.ddownClose i
+    font-size:2.1em;
+    transition:0.2s
+
 div.ddownOuter
     border-top: 2px solid lightGrey
     background-color: white
     position: absolute
     z-index 10000
     width: 100%
-    min-height: 30vh
+    display: flex
+    min-height: 50vh
+
 div.ddownInner
     padding:padM
+    margin-right: marM
     display: flex
     justify-content: space-between
+div.ddownInner section
+    flex:1 1 75%
+
 div.ddownInner section:first-child
-    flex-basis: 30%
-    {test}
-div.ddownInner section:last-child
-    flex-basis: 65%
-    {test}    
+    flex-basis: 25%
+    margin-right: marStd
+    padding-right: padStd
+    border-right:4px solid brand1
+div.ddownInner section.desc
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
 div.ddownInner picture.brand
     display: inline-block
     width:150px
+    margin-top: marXS
+    margin-bottom: marStd
 div.ddownInner picture.brand img
     width:100% 
     height: auto
+div.ddownInner nav a
+    display: inline-flex
+    align-items: center
+    flex-shrink: 0
+div.ddownInner nav a span
+    display: inline-flex
+    align-items: center
+    font-weight: 350 !important
+    font-size: 1.2em !important
+    line-height: 1.2em    
+div.ddownInner nav a i
+    margin-right: marXXS
+    font-size:30px
+    width: 60px
+    height: 60px
+    flex:0 0 auto
+    transition:0.2s
 
-//@media phoneRule
+div.ddownOuter
+    display: none;
+@media phoneRule2
     div.ddownOuter
         display: none;
+
+/* brandable elements in dropdown */
+a.ddownClose i
+    color: brand1
+div.ddownInner section:first-child
+    border-right-color: brand1
+div.ddownInner nav i
+    background-color: brand1
+@media (pointer: fine)
+    a.ddownClose:hover i
+        color: brand1 !important
+        transition:0.4s
+    div.ddownInner nav a:hover
+        color: brand1 !important
+    div.ddownInner nav a:hover i
+        background-color: brand2 !important
+        transition:0.4s
+
+
+
+
+
+/* .smallGrid */
+.smallGrid
+    display: grid
+    grid-gap: 0.5vw 1.5vw
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr))
+.smallGrid > *
+    padding: padXXS*0.5
+    border-radius: 4px
+   

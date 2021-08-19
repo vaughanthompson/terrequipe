@@ -1056,6 +1056,7 @@ nav a.ctaButton {
   margin-right: 1.5vw;
   margin-bottom: 0;
   padding: 0.75vw 1.5vw;
+  white-space: nowrap;
 }
 a.ctaButton i {
   margin-left: 15px;
@@ -1864,8 +1865,10 @@ div.brandCarousel div.slickItem > a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-div.brandCarousel div.slickItem > a:hover {
-  margin-top: 6px;
+@media (pointer: fine) {
+  div.brandCarousel div.slickItem > a:hover {
+    margin-top: 6px;
+  }
 }
 div.brandCarousel div.slickItem > a > div:last-child {
   -ms-flex-preferred-size: 20px;
@@ -1911,12 +1914,16 @@ div.slickBrands {
   }
 }
 a.ddownClose {
-  padding: 10px;
-  background-color: #ebebeb;
+  padding: 0;
   display: inline-block;
   position: absolute;
-  top: 1vw;
-  right: marXXSt;
+  top: 1.5vw;
+  right: 2vw;
+}
+a.ddownClose i {
+  font-size: 2.1em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 div.ddownOuter {
   border-top: 2px solid #ebebeb;
@@ -1924,10 +1931,15 @@ div.ddownOuter {
   position: absolute;
   z-index: 10000;
   width: 100%;
-  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  min-height: 50vh;
 }
 div.ddownInner {
   padding: 3vw;
+  margin-right: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: box;
@@ -1937,26 +1949,123 @@ div.ddownInner {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-div.ddownInner section:first-child {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-  border: 1px solid #0ff;
+div.ddownInner section {
+  -webkit-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -ms-flex: 1 1 75%;
+  flex: 1 1 75%;
 }
-div.ddownInner section:last-child {
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
-  border: 1px solid #0ff;
+div.ddownInner section:first-child {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-right: 2vw;
+  padding-right: 2vw;
+  border-right: 4px solid #1a1a1a;
+}
+div.ddownInner section.desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -o-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 div.ddownInner picture.brand {
   display: inline-block;
   width: 150px;
+  margin-top: 1.5vw;
+  margin-bottom: 2vw;
 }
 div.ddownInner picture.brand img {
   width: 100%;
   height: auto;
 }
+div.ddownInner nav a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+div.ddownInner nav a span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 350 !important;
+  font-size: 1.2em !important;
+  line-height: 1.2em;
+}
+div.ddownInner nav a i {
+  margin-right: 1vw;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  -webkit-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
 div.ddownOuter {
   display: none;
+}
+@media screen and (max-width: 750px), screen and (max-height: 750px) {
+  div.ddownOuter {
+    display: none;
+  }
+}
+a.ddownClose i {
+  color: #1a1a1a;
+}
+div.ddownInner section:first-child {
+  border-right-color: #1a1a1a;
+}
+div.ddownInner nav i {
+  background-color: #1a1a1a;
+}
+@media (pointer: fine) {
+  a.ddownClose:hover i {
+    color: #1a1a1a !important;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  div.ddownInner nav a:hover {
+    color: #1a1a1a !important;
+  }
+  div.ddownInner nav a:hover i {
+    background-color: #000 !important;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+.smallGrid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5vw 1.5vw;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+}
+.smallGrid > * {
+  padding: 0.5vw;
+  border-radius: 4px;
 }
 a:link,
 a:visited {
@@ -2013,8 +2122,10 @@ li a:hover,
   transition: 500ms;
   text-decoration: none !important;
 }
-nav a:hover {
-  color: #f00 !important;
+@media (pointer: fine) {
+  nav a:hover {
+    color: #f00 !important;
+  }
 }
 .activeLink,
 .activeLink:hover {
@@ -2142,8 +2253,8 @@ h6 {
   letter-spacing: -0.015em;
 }
 p {
-  font-weight: 350;
-  font-size: 0.93em;
+  font-weight: 300;
+  font-size: 0.9em;
   line-height: 1.35em;
   letter-spacing: -0.025em;
 }
@@ -2228,10 +2339,10 @@ body > footer h6 {
 *
 */
 div.brandCarousel a.jcb {
-  border-bottom-color: #fbad28 !important;
+  border-bottom-color: #fcb026 !important;
 }
 div.brandCarousel a.jcb i {
-  color: #fbad28;
+  color: #fcb026;
 }
 div.brandCarousel a.msy {
   border-bottom-color: #c41230 !important;
@@ -2310,6 +2421,15 @@ a.mah img {
 }
 a.yeo img {
   max-height: 42px !important;
+}
+div.ddownOuter.jcb a.ddownClose i {
+  color: #fcb026;
+}
+div.ddownOuter.jcb div.ddownInner section:first-child {
+  border-right-color: #fcb026;
+}
+div.ddownOuter.jcb div.ddownInner nav i {
+  background-color: #fcb026;
 }
 /* effects */
 .multiply {

@@ -123,14 +123,15 @@
     });
 
 
-    // slideNav
-    $('#omniDrop').click(function(){
-        //$(this).hide();
-        $(this).siblings('a').toggleClass('faded');
-        $(this).find('i').toggleClass('rotateIC');
-        $('#slideNav').slideToggle();
+    // ddown
+    $('a.ddownClose').click(function(){
+        $(this).parent('div.ddownOuter').fadeTo(250,0).hide(300);
         return false;
+    });
 
+    $('div.brandCarousel a.jcb').click(function(){
+        $('div.ddownOuter.jcb').fadeTo(250,1);
+        return false;
     });
 
 
