@@ -552,13 +552,23 @@ span.storeLinks a
 
 
 /* simple list */
+ul.featureList
+    padding:0
 ul.featureList li
     list-style-type: none
     line-height:1.5em
     margin-bottom: 0.75em
+    margin-left:15px
 ul.featureList li strong
     display: inline-block
     min-width:12%
+ul.featureList li:before
+    font-family: 'icomoon'
+    content: "\e906"
+    font-size: 0.9em
+    margin-right:3px
+    margin-left:-15px
+
 
 /* footer list */
 body > footer ul 
@@ -579,7 +589,7 @@ body > footer ul > li
     list-style-type: none
     line-height: 1.4em
     padding: 0.7em 0
-    border-top: 1px solid blackAlp10
+    border-top: 1px solid white
     
 
 /* form */
@@ -643,6 +653,8 @@ div.thirdparty-logo
 
 div.containSlider
     position: relative
+body.brand div.containSlider
+    margin-top: marM
 
 body.lightSlider div.slickSlider
     background-color: white
@@ -823,4 +835,95 @@ div.ddownInner nav i
 .smallGrid > *
     padding: padXXS*0.5
     border-radius: 4px
+   
+
+// breadcrumb
+#breadcrumb
+    margin-bottom: marStd*1.2
+#breadcrumb nav
+    display: inline-flex
+    align-items: center
+    line-height: 1em;
+    flex-wrap: wrap
+#breadcrumb nav a
+    padding-right: 0
+    text-decoration: underline
+#breadcrumb nav a,
+#breadcrumb nav a.activeLink
+    font-weight: 500 !important
+#breadcrumb nav i
+    padding: 0 5px   
+
+
+
+// brand sub head mods
+body.brand article.subhead section:last-child
+    align-self: flex-end
+    display: flex
+    justify-content: flex-end
+body.brand article.subhead picture.brand
+    display: inline-block
+    width:150px
+    margin: marStd marL
+body.brand article.subhead picture.brand img
+    width:100% 
+    height: auto    
+
+
+// cat
+i.toggleIcon:before
+    font-family: 'icomoon'
+    content: '\e904'
+    font-size: 1em
+i.toggleIcon.upDown:before
+    font-family: 'icomoon'
+    content: '\e907'
+.catItem h6
+    text-decoration: underline
+    max-width:90%
+.catItem:hover h6
+    text-decoration: none
+div.keyStats
+    margin-top: 1em
+div.keyStats p
+    font-weight: 400
+    margin: 0
+    margin-bottom: 0.6em
+    max-width:80%
+div.keyStats span
+    text-transform: uppercase
+    font-size: 0.75em
+    letter-spacing: 0
+    font-weight:500
+    display: block
+
+div.imageThumb
+    height: 10vw
+    background-color: blackAlp5
+    background-size: cover
+    background-position: center
+    margin-bottom: marXS
+div.landing div.imageThumb
+    max-width: 8vw
+    height:6vw
+@media dtrigger
+    main > div.catList
+        margin: marStd auto marStd auto
+        padding: padXXS 0 padXXS 0
+    div.catList a.basic
+        display: inline-block
+        margin-right: marL
+        font-size: 0.9em
+        margin-bottom: marXXS
+    div.catList div.catGroup
+        clear: both
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        margin-top: marXXS
+        margin-bottom: 0
+    div.catList .catItem
+        flex-basis: 15%
+        margin-right: marM*1.2
+        margin-bottom: marM
    

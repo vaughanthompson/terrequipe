@@ -136,6 +136,16 @@
 
 
 
+    // slideToggle content
+    $('div.slideToggleChild').hide();
+    $('a.slideToggleTrigger').click(function(){
+        $(this).closest('div.slideToggleParent').find('div.slideToggleChild').slideToggle(500);
+        $(this).html(($(this).html()=="Close comparison"?"Click to compare":"Close comparison"));
+        $(this).parent().find('i').toggleClass('upDown');
+        return false;
+    });
+
+
 
     // show random div
     var elems = $(".randomShow");

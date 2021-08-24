@@ -26,54 +26,85 @@ asv = #a1c02f //ASV
 mah = #e41937 //mahindra
 yeo = #ff0f00 //yeomans plow 
 
-div.brandCarousel a.jcb
-    border-bottom-color: jcb !important
+
+/* global */
 div.brandCarousel a.jcb i
     color: jcb
+div.brandCarousel a.jcb
+    border-color: jcb !important
+
+
+brandHR = 'body.jcb main hr'
+{brandHR}
+    border-bottom-width: 3px
+
+
+/* brand silos */
+body.jcb
+    jcbcolors = '
+    #breadcrumb nav i:before,
+    div.keyStats span,
+    div.catList i:before,
+    h1, 
+    h2'
+    {jcbcolors}
+        color: jcb
+    jcbborders = 'main hr'
+    {jcbborders}
+        border-color: jcb !important   
 
 div.brandCarousel a.msy
-    border-bottom-color: msy !important
-div.brandCarousel a.msy i
+    border-color: msy !important
+div.brandCarousel a.msy i,
+body.msy #breadcrumb nav i:before
     color: msy
 
 div.brandCarousel a.fdt
-    border-bottom-color: fdt !important
-div.brandCarousel a.fdt i
+    border-color: fdt !important
+div.brandCarousel a.fdt i,
+body.fdt #breadcrumb nav i:before
     color: fdt
 
 div.brandCarousel a.dst
-    border-bottom-color: dst !important
-div.brandCarousel a.dst i
+    border-color: dst !important
+div.brandCarousel a.dst i,
+body.dst #breadcrumb nav i:before
     color: dst
 
 div.brandCarousel a.isk
-    border-bottom-color: isk !important
-div.brandCarousel a.isk i
+    border-color: isk !important
+div.brandCarousel a.isk i,
+body.isk #breadcrumb nav i:before
     color: isk
 
 div.brandCarousel a.cls
-    border-bottom-color: cls !important
-div.brandCarousel a.cls i
+    border-color: cls !important
+div.brandCarousel a.cls i,
+body.cls #breadcrumb nav i:before
     color: cls    
 
 div.brandCarousel a.ama
-    border-bottom-color: ama !important
-div.brandCarousel a.ama i
+    border-color: ama !important
+div.brandCarousel a.ama i,
+body.ama #breadcrumb nav i:before
     color: ama
 
 div.brandCarousel a.asv
-    border-bottom-color: asv !important
-div.brandCarousel a.asv i
+    border-color: asv !important
+div.brandCarousel a.asv i,
+body.asv #breadcrumb nav i:before
     color: asv
     
 div.brandCarousel a.mah
-    border-bottom-color: mah !important
-div.brandCarousel a.mah i
+    border-color: mah !important
+div.brandCarousel a.mah i,
+body.mah #breadcrumb nav i:before
     color: mah
 
 div.brandCarousel a.yeo
-    border-bottom-color: yeo !important
-div.brandCarousel a.yeo i
+    border-color: yeo !important
+div.brandCarousel a.yeo i,
+body.yeo #breadcrumb nav i:before
     color: yeo    
 
 
