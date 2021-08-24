@@ -2144,6 +2144,7 @@ i.toggleIcon.upDown:before {
   content: '\e907';
 }
 .catItem h6 {
+  font-weight: 500;
   text-decoration: underline;
   max-width: 90%;
 }
@@ -2167,14 +2168,14 @@ div.keyStats span {
   display: block;
 }
 div.imageThumb {
-  height: 10vw;
+  height: 12.5vw;
   background-color: rgba(0,0,0,0.05);
   background-size: cover;
   background-position: center;
   margin-bottom: 1.5vw;
 }
 div.landing div.imageThumb {
-  max-width: 8vw;
+  max-width: 8.5vw;
   height: 6vw;
 }
 @media screen and (min-width: 1100px) {
@@ -2207,9 +2208,15 @@ div.landing div.imageThumb {
     margin-bottom: 0;
   }
   div.catList .catItem {
-    -ms-flex-preferred-size: 15%;
-        flex-basis: 15%;
-    margin-right: 3.6vw;
+    -ms-flex-preferred-size: 19%;
+        flex-basis: 19%;
+    margin-right: 5.4vw;
+    margin-bottom: 5vw;
+  }
+  div.catList.landing .catItem {
+    -ms-flex-preferred-size: 14%;
+        flex-basis: 14%;
+    margin-right: 3.3vw;
     margin-bottom: 3vw;
   }
 }

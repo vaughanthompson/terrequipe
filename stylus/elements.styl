@@ -879,6 +879,7 @@ i.toggleIcon.upDown:before
     font-family: 'icomoon'
     content: '\e907'
 .catItem h6
+    font-weight: 500
     text-decoration: underline
     max-width:90%
 .catItem:hover h6
@@ -898,13 +899,13 @@ div.keyStats span
     display: block
 
 div.imageThumb
-    height: 10vw
+    height: 12.5vw
     background-color: blackAlp5
     background-size: cover
     background-position: center
     margin-bottom: marXS
 div.landing div.imageThumb
-    max-width: 8vw
+    max-width: 8.5vw
     height:6vw
 @media dtrigger
     main > div.catList
@@ -923,7 +924,11 @@ div.landing div.imageThumb
         margin-top: marXXS
         margin-bottom: 0
     div.catList .catItem
-        flex-basis: 15%
-        margin-right: marM*1.2
+        flex-basis: 19%
+        margin-right: marM*1.8
+        margin-bottom: marL    
+    div.catList.landing .catItem
+        flex-basis: 14%
+        margin-right: marM*1.1
         margin-bottom: marM
    
