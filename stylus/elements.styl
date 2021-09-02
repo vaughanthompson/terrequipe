@@ -873,7 +873,7 @@ body.brand.model article.subhead section:last-child
     flex-basis: 65%
 body.brand article.subhead picture.brand
     display: inline-block
-    width:150px
+    width:130px
     margin: marStd marL marStd 0
 body.brand article.subhead img
     width:100% 
@@ -913,13 +913,13 @@ div.keyStats span
     display: block
 
 div.imageThumb
-    height: 12.5vw
+    height: 11vw
     background-color: blackAlp5
     background-size: cover
     background-position: center
     margin-bottom: marXS
 div.landing div.imageThumb
-    max-width: 8.5vw
+    max-width: 9vw
     height:6vw
 @media dtrigger
     main > div.catList
@@ -972,7 +972,7 @@ body.model div.keyStats span
     margin-right: marXXS
 
 body.model div.imageThumb
-    height: 12.5vw
+    height: 11vw
 body.model .catItem h6
     text-decoration: none
     font-weight: 600
@@ -1077,7 +1077,7 @@ table.rowResponsive tr td:first-child
         padding-bottom: padStd
     table.rowResponsive tbody td
         //display: block
-        flex-basis: 47%
+        flex-basis: 80%
         text-align: left
         display: flex
         justify-content: space-between
@@ -1100,25 +1100,53 @@ table.rowResponsive tr td:first-child
 // print image styles
 
 img.print
-    display: none;
+    display: none
+img.print.logo
+    max-width: 30%
+    margin-top: marM
+    margin-bottom: marStd
 @media print
+    body 
+        font-size:14px
+    div.navHeight,   
+    .ctaButton,
+    body > header,
+    body > footer
+        display: none !important
     img.print
         display: block
         max-width: 60%
     div.catItem img.print
         display: block
-        max-width: 20%
+        width: 20%
+        height: auto
+        margin-bottom: marM
     div.gallery div.galleryItem
         min-height: auto
+    div.gallery div.thumbImg
+        display: inline-flex
     div.gallery div.thumbImg a
         width: auto
-        flex-basis: 20%
-        {test}
+        height: auto
+        flex-basis: 15%
     div.gallery div.thumbImg span
         width: auto
-        {test}
+        display: block
+    div.gallery div.thumbImg span img
+        width: 100%
+        height: auto
     div.thumbImg a.activeLink,
     div.thumbImg a.isVideo
         display: none
+    table.rowResponsive tbody tr
+        border-bottom: none
+    body.model main > article:nth-of-type(1),
+    body.model main > article:nth-of-type(2)
+        page-break-after: always
+    body.model main > hr
+        display none
+    body.model main > article
+        padding-top: marL
+
     
 

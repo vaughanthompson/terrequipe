@@ -927,7 +927,7 @@ div.containMNav h6 {
   }
 }
 @media print {
-  div#mblNavControl {
+  #navHeader {
     display: none;
   }
 }
@@ -2178,7 +2178,7 @@ body.brand.model article.subhead section:last-child {
 }
 body.brand article.subhead picture.brand {
   display: inline-block;
-  width: 150px;
+  width: 130px;
   margin: 2vw 5vw 2vw 0;
 }
 body.brand article.subhead img {
@@ -2225,14 +2225,14 @@ div.keyStats span {
   display: block;
 }
 div.imageThumb {
-  height: 12.5vw;
+  height: 11vw;
   background-color: rgba(0,0,0,0.05);
   background-size: cover;
   background-position: center;
   margin-bottom: 1.5vw;
 }
 div.landing div.imageThumb {
-  max-width: 8.5vw;
+  max-width: 9vw;
   height: 6vw;
 }
 @media screen and (min-width: 1100px) {
@@ -2304,7 +2304,7 @@ body.model div.keyStats span {
   margin-right: 1vw;
 }
 body.model div.imageThumb {
-  height: 12.5vw;
+  height: 11vw;
 }
 body.model .catItem h6 {
   text-decoration: none;
@@ -2438,8 +2438,8 @@ table.rowResponsive tr td:first-child {
     padding-bottom: 2vw;
   }
   table.rowResponsive tbody td {
-    -ms-flex-preferred-size: 47%;
-        flex-basis: 47%;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2473,31 +2473,70 @@ table.rowResponsive tr td:first-child {
 img.print {
   display: none;
 }
+img.print.logo {
+  max-width: 30%;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
 @media print {
+  body {
+    font-size: 14px;
+  }
+  div.navHeight,
+  .ctaButton,
+  body > header,
+  body > footer {
+    display: none !important;
+  }
   img.print {
     display: block;
     max-width: 60%;
   }
   div.catItem img.print {
     display: block;
-    max-width: 20%;
+    width: 20%;
+    height: auto;
+    margin-bottom: 3vw;
   }
   div.gallery div.galleryItem {
     min-height: auto;
   }
+  div.gallery div.thumbImg {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-box;
+    display: inline-flex;
+  }
   div.gallery div.thumbImg a {
     width: auto;
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-    border: 1px solid #0ff;
+    height: auto;
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
   }
   div.gallery div.thumbImg span {
     width: auto;
-    border: 1px solid #0ff;
+    display: block;
+  }
+  div.gallery div.thumbImg span img {
+    width: 100%;
+    height: auto;
   }
   div.thumbImg a.activeLink,
   div.thumbImg a.isVideo {
     display: none;
+  }
+  table.rowResponsive tbody tr {
+    border-bottom: none;
+  }
+  body.model main > article:nth-of-type(1),
+  body.model main > article:nth-of-type(2) {
+    page-break-after: always;
+  }
+  body.model main > hr {
+    display: none;
+  }
+  body.model main > article {
+    padding-top: 5vw;
   }
 }
 a:link,
