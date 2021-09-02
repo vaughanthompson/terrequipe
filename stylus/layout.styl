@@ -86,10 +86,16 @@
         flex-basis: 47%
         padding-left: padStd
         padding-right: padStd
+    main > article.full section
+        flex-basis: auto
     main > article section:first-child
         padding-left: 0
+    main > article.sideBarLeft section:first-child
+        flex-basis: 25%
     main > article section:last-child
-        padding-right: 0        
+        padding-right: 0 
+    main > article.sideBarLeft section:last-child
+        flex-basis: 75%   
 
     body > footer
         display: flex
@@ -126,7 +132,9 @@
 .picturefill-background
     overflow hidden
 
-
+@media print
+    body > header
+        display: none
 
 // content
 div.contentHdr,    
@@ -494,4 +502,6 @@ div.containMNav h6
         height: 100%
 
 
-
+@media print
+    div#mblNavControl
+        display: none

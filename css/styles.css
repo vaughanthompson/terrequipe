@@ -50,6 +50,10 @@ hr {
   border-bottom: 1px solid rgba(0,0,0,0.25);
   margin: 2vw 0;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 .noPad {
   padding: 0 !important;
 }
@@ -208,11 +212,23 @@ hr {
     padding-left: 2vw;
     padding-right: 2vw;
   }
+  main > article.full section {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
   main > article section:first-child {
     padding-left: 0;
   }
+  main > article.sideBarLeft section:first-child {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
   main > article section:last-child {
     padding-right: 0;
+  }
+  main > article.sideBarLeft section:last-child {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
   }
   body > footer {
     display: -webkit-box;
@@ -1044,10 +1060,10 @@ a.ctaButton {
   border-radius: 50px;
   background: #1a1a1a;
   color: #fff !important;
-  font-size: 1em;
+  font-size: 0.95em;
   font-weight: 500;
   border: 1px solid #1a1a1a;
-  padding: 1vw 1.5vw;
+  padding: 0.9vw 2vw 1vw 2vw;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-box;
@@ -1080,7 +1096,7 @@ a.ctaButton i:before {
 }
 a.ctaButton:hover,
 a.ctaButton:hover > i:before {
-  background: none;
+  background: none !important;
   color: #000 !important;
   border-color: #000 !important;
   border-bottom-color: #000 !important;
@@ -2104,7 +2120,7 @@ div.ddownInner nav i {
   -o-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  line-height: 1em;
+  line-height: 1.3em;
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
   -o-box-lines: multiple;
@@ -2144,16 +2160,21 @@ body.brand article.subhead section:last-child {
   -ms-flex-align: end;
   align-items: flex-end;
 }
+body.brand.model article.subhead {
+  padding-bottom: 1vw;
+}
 body.brand.model article.subhead section:first-child {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   padding-right: 3vw;
-  border: 1px solid #0ff;
 }
 body.brand.model article.subhead section:last-child {
+  -webkit-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
-  border: 1px solid #0ff;
 }
 body.brand article.subhead picture.brand {
   display: inline-block;
@@ -2226,7 +2247,6 @@ div.landing div.imageThumb {
     margin-bottom: 1vw;
   }
   div.catList div.catGroup {
-    clear: both;
     display: -webkit-box;
     display: -ms-flexbox;
     display: box;
@@ -2256,6 +2276,65 @@ div.landing div.imageThumb {
     margin-bottom: 3vw;
   }
 }
+body.model div.keyStats {
+  margin-top: 3vw;
+  margin-bottom: 1vw;
+}
+body.model div.keyStats p {
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 1vw;
+  margin-bottom: 1vw;
+  max-width: 100%;
+  border-bottom: 1px solid #1a1a1a;
+}
+body.model div.keyStats p a {
+  font-weight: 300;
+}
+body.model div.keyStats p:last-child {
+  border-bottom: none;
+}
+body.model div.keyStats span {
+  text-transform: none;
+  font-size: 1em;
+  letter-spacing: 0;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 50%;
+  margin-right: 1vw;
+}
+body.model div.imageThumb {
+  height: 12.5vw;
+}
+body.model .catItem h6 {
+  text-decoration: none;
+  font-weight: 600;
+}
+@media screen and (min-width: 1100px) {
+  body.model div.catList div.catGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: start;
+    -o-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 1vw;
+    margin-bottom: 0;
+  }
+  body.model div.catList .catItem {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    margin-right: 5.4vw;
+    margin-bottom: 5vw;
+  }
+}
 div.gallery {
   margin-bottom: 1.5vw;
   width: 100%;
@@ -2267,47 +2346,129 @@ div.gallery div.galleryItem {
   background-repeat: no-repeat;
   background-size: cover;
 }
+div.gallery div.galleryItem div.pbVideo iframe {
+  height: 37vw;
+}
 .thumbImg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
+  margin: 0.5vw 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
   -o-box-lines: multiple;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.thumbImg img {
-  margin: 10px;
-  margin-left: 0;
-}
 div.gallery div.thumbImg a {
-  width: 90px;
-  height: 60px;
+  padding: 1px;
+  margin-right: 0.25vw;
+  border: 2px solid rgba(255,255,255,0);
+}
+div.gallery div.thumbImg span {
+  width: 72px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   text-align: center;
+  display: block;
 }
-div.gallery div.thumbImg a.activeLink img {
-  opacity: 0.3;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-  filter: alpha(opacity=30);
+div.gallery div.thumbImg a.activeLink {
+  border: 2px solid #1a1a1a;
 }
-div.gallery div.thumbImg a.isVideo:before {
+div.gallery div.thumbImg a.activeLink span {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.gallery div.thumbImg a.isVideo span:before {
   position: absolute;
   width: 40px;
   height: 30px;
   line-height: 30px;
-  border-radius: 4px;
+  border-radius: 8px;
   top: 50%;
   left: 50%;
-  margin-left: -24px;
+  margin-left: -20px;
   margin-top: -15px;
-  background-color: rgba(255,255,255,0.8);
-  color: #f00;
-  content: "\e912";
-  font-size: 30px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  content: "\e906";
+  font-size: 26px;
   font-family: "icomoon";
+}
+table.rowResponsive {
+  margin: 2vw 0 2vw 0;
+  border-collapse: collapse;
+}
+table.rowResponsive tbody tr {
+  border-bottom: 1px solid #000;
+}
+table.rowResponsive td {
+  padding: 1.35vw 2vw 1.2vw 2vw;
+  text-align: center;
+}
+table.rowResponsive tr td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  table.rowResponsive thead {
+    display: none;
+  }
+  table.rowResponsive tbody tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+    padding-bottom: 2vw;
+  }
+  table.rowResponsive tbody td {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 2vw 1.5vw 2vw;
+  }
+  table.rowResponsive tbody td:first-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 750px) {
+  table.rowResponsive {
+    border-color: #f00;
+    max-width: 90vw;
+  }
+  table.rowResponsive thead {
+    background-color: #000;
+    color: #fff;
+  }
+  table.rowResponsive tbody tr:last-child {
+    border-bottom: none;
+  }
 }
 img.print {
   display: none;
@@ -2315,6 +2476,28 @@ img.print {
 @media print {
   img.print {
     display: block;
+    max-width: 60%;
+  }
+  div.catItem img.print {
+    display: block;
+    max-width: 20%;
+  }
+  div.gallery div.galleryItem {
+    min-height: auto;
+  }
+  div.gallery div.thumbImg a {
+    width: auto;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    border: 1px solid #0ff;
+  }
+  div.gallery div.thumbImg span {
+    width: auto;
+    border: 1px solid #0ff;
+  }
+  div.thumbImg a.activeLink,
+  div.thumbImg a.isVideo {
+    display: none;
   }
 }
 a:link,
@@ -2359,12 +2542,12 @@ ul li {
   *.picturefill-background.lighten1 a,
   *.picturefill-background.lighten2,
   *.picturefill-background.lighten2 a,
-  *.picturefill-background.darktext,
-  *.picturefill-background.darktext a {
+  *.picturefill-background .darktext,
+  *.picturefill-background .darktext a {
     color: rgba(0,0,0,0.5);
   }
-  *.picturefill-background.lighttext,
-  *.picturefill-background.lighttext a {
+  *.picturefill-background .lighttext,
+  *.picturefill-background .lighttext a {
     color: #fff;
   }
 }
@@ -2476,7 +2659,8 @@ h2 span {
   font-weight: 300;
   letter-spacing: -0.015em;
 }
-h3 {
+h3,
+body.model h2 {
   font-weight: 700;
   font-size: 1.7em;
   line-height: 115%;
@@ -2512,12 +2696,18 @@ h6 {
   letter-spacing: -0.015em;
 }
 p {
-  font-weight: 300;
+  font-weight: 350;
   font-size: 0.95em;
   line-height: 1.35em;
   letter-spacing: -0.025em;
 }
 li {
+  font-weight: 350;
+  font-size: 0.95em;
+  line-height: 1.35em;
+  letter-spacing: -0.025em;
+}
+td {
   font-weight: 350;
   font-size: 0.95em;
   line-height: 1.35em;
@@ -2609,80 +2799,58 @@ div.brandCarousel a.jcb i {
 div.brandCarousel a.jcb {
   border-color: #fcb026 !important;
 }
-body.jcb main hr {
-  border-bottom-width: 3px;
-}
-body.jcb #breadcrumb nav i:before,
-body.jcb div.keyStats span,
-body.jcb div.catList i:before,
-body.jcb h1,
-body.jcb h2 {
-  color: #fcb026;
-}
-body.jcb main hr {
-  border-color: #fcb026 !important;
-}
 div.brandCarousel a.massey-ferguson {
   border-color: #c41230 !important;
 }
-div.brandCarousel a.massey-ferguson i,
-body.massey-ferguson #breadcrumb nav i:before {
+div.brandCarousel a.massey-ferguson i {
   color: #c41230;
 }
 div.brandCarousel a.fendt {
   border-color: #2dba03 !important;
 }
-div.brandCarousel a.fendt i,
-body.fendt #breadcrumb nav i:before {
+div.brandCarousel a.fendt i {
   color: #2dba03;
 }
 div.brandCarousel a.dressta {
   border-color: #047eb1 !important;
 }
-div.brandCarousel a.dressta i,
-body.dressta #breadcrumb nav i:before {
+div.brandCarousel a.dressta i {
   color: #047eb1;
 }
 div.brandCarousel a.iseki {
   border-color: #0068b7 !important;
 }
-div.brandCarousel a.iseki i,
-body.iseki #breadcrumb nav i:before {
+div.brandCarousel a.iseki i {
   color: #0068b7;
 }
 div.brandCarousel a.claas {
   border-color: #d30a00 !important;
 }
-div.brandCarousel a.claas i,
-body.claas #breadcrumb nav i:before {
+div.brandCarousel a.claas i {
   color: #d30a00;
 }
 div.brandCarousel a.amazone {
   border-color: #e97714 !important;
 }
-div.brandCarousel a.amazone i,
-body.amazone #breadcrumb nav i:before {
+div.brandCarousel a.amazone i {
   color: #e97714;
 }
 div.brandCarousel a.asv {
   border-color: #a1c02f !important;
 }
-div.brandCarousel a.asv i,
-body.asv #breadcrumb nav i:before {
+div.brandCarousel a.asv i {
   color: #a1c02f;
 }
 div.brandCarousel a.mahindra {
   border-color: #e41937 !important;
 }
-div.brandCarousel a.mahindra i,
-body.mahindra #breadcrumb nav i:before {
+div.brandCarousel a.mahindra i {
   color: #e41937;
 }
 div.brandCarousel a.yeomans-plow {
   border-color: #ff0f00 !important;
 }
-div.brandCarousel a.yeomans-plow i,
-body.yeomans-plow #breadcrumb nav i:before {
+div.brandCarousel a.yeomans-plow i {
   color: #ff0f00;
 }
 a.jcb img {
@@ -2717,6 +2885,52 @@ div.ddownOuter.jcb div.ddownInner section:first-child {
 }
 div.ddownOuter.jcb div.ddownInner nav i {
   background-color: #fcb026;
+}
+body.jcb #breadcrumb nav i:before,
+body.jcb div.keyStats span,
+body.jcb div.catList i:before,
+body.jcb .brand,
+body.jcb h1,
+body.jcb h2,
+body.jcb main a.ctaButton:hover {
+  color: #fcb026 !important;
+}
+body.jcb main hr,
+body.jcb .thumbImg a.activeLink,
+body.jcb div.keyStats p,
+body.jcb main a.ctaButton,
+body.jcb table.rowResponsive tbody tr {
+  border-color: #fcb026 !important;
+}
+body.jcb main a.ctaButton,
+body.jcb table.rowResponsive thead {
+  background-color: #fcb026;
+}
+body.jcb main hr {
+  border-bottom-width: 3px;
+}
+body.massey-ferguson #breadcrumb nav i:before,
+body.massey-ferguson div.keyStats span,
+body.massey-ferguson div.catList i:before,
+body.massey-ferguson .brand,
+body.massey-ferguson h1,
+body.massey-ferguson h2,
+body.massey-ferguson main a.ctaButton:hover {
+  color: #c41230 !important;
+}
+body.massey-ferguson main hr,
+body.massey-ferguson .thumbImg a.activeLink,
+body.massey-ferguson div.keyStats p,
+body.massey-ferguson main a.ctaButton,
+body.massey-ferguson table.rowResponsive tbody tr {
+  border-color: #c41230 !important;
+}
+body.massey-ferguson main a.ctaButton,
+body.massey-ferguson table.rowResponsive thead {
+  background-color: #c41230;
+}
+body.massey-ferguson main hr {
+  border-bottom-width: 3px;
 }
 /* effects */
 .multiply {

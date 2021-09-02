@@ -16,96 +16,71 @@
 
 
 jcb = #FCB026 //J.C.B
-msy = #c41230 //massey ferguson
-fdt = #2dba03 //fendt
-dst = #047eb1 //dressta
-isk = #0068b7 //iseki
-cls = #d30a00 //Claas
-ama = #e97714 //Amazone
+massey-ferguson = #c41230 //massey ferguson
+fendt = #2dba03 //fendt
+dressta = #047eb1 //dressta
+iseki = #0068b7 //iseki
+claas = #d30a00 //Claas
+amazone = #e97714 //Amazone
 asv = #a1c02f //ASV
-mah = #e41937 //mahindra
-yeo = #ff0f00 //yeomans plow 
+mahindra = #e41937 //mahindra
+yeomans-plow = #ff0f00 //yeomans plow 
 
 
-/* global */
+/* brandCarousel  */
 div.brandCarousel a.jcb i
     color: jcb
 div.brandCarousel a.jcb
     border-color: jcb !important
 
+div.brandCarousel a.massey-ferguson
+    border-color: massey-ferguson !important
+div.brandCarousel a.massey-ferguson i
+    color: massey-ferguson
 
-brandHR = 'body.jcb main hr'
-{brandHR}
-    border-bottom-width: 3px
+div.brandCarousel a.fendt
+    border-color: fendt !important
+div.brandCarousel a.fendt i
+    color: fendt
 
+div.brandCarousel a.dressta
+    border-color: dressta !important
+div.brandCarousel a.dressta i
+    color: dressta
 
-/* brand silos */
-body.jcb
-    jcbcolors = '
-    #breadcrumb nav i:before,
-    div.keyStats span,
-    div.catList i:before,
-    h1, 
-    h2'
-    {jcbcolors}
-        color: jcb
-    jcbborders = 'main hr'
-    {jcbborders}
-        border-color: jcb !important   
+div.brandCarousel a.iseki
+    border-color: iseki !important
+div.brandCarousel a.iseki i
+    color: iseki
 
-div.brandCarousel a.msy
-    border-color: msy !important
-div.brandCarousel a.msy i,
-body.msy #breadcrumb nav i:before
-    color: msy
+div.brandCarousel a.claas
+    border-color: claas !important
+div.brandCarousel a.claas i
+    color: claas    
 
-div.brandCarousel a.fdt
-    border-color: fdt !important
-div.brandCarousel a.fdt i,
-body.fdt #breadcrumb nav i:before
-    color: fdt
-
-div.brandCarousel a.dst
-    border-color: dst !important
-div.brandCarousel a.dst i,
-body.dst #breadcrumb nav i:before
-    color: dst
-
-div.brandCarousel a.isk
-    border-color: isk !important
-div.brandCarousel a.isk i,
-body.isk #breadcrumb nav i:before
-    color: isk
-
-div.brandCarousel a.cls
-    border-color: cls !important
-div.brandCarousel a.cls i,
-body.cls #breadcrumb nav i:before
-    color: cls    
-
-div.brandCarousel a.ama
-    border-color: ama !important
-div.brandCarousel a.ama i,
-body.ama #breadcrumb nav i:before
-    color: ama
+div.brandCarousel a.amazone
+    border-color: amazone !important
+div.brandCarousel a.amazone i
+    color: amazone
 
 div.brandCarousel a.asv
     border-color: asv !important
-div.brandCarousel a.asv i,
-body.asv #breadcrumb nav i:before
+div.brandCarousel a.asv i
     color: asv
     
-div.brandCarousel a.mah
-    border-color: mah !important
-div.brandCarousel a.mah i,
-body.mah #breadcrumb nav i:before
-    color: mah
+div.brandCarousel a.mahindra
+    border-color: mahindra !important
+div.brandCarousel a.mahindra i
+    color: mahindra
 
-div.brandCarousel a.yeo
-    border-color: yeo !important
-div.brandCarousel a.yeo i,
-body.yeo #breadcrumb nav i:before
-    color: yeo    
+div.brandCarousel a.yeomans-plow
+    border-color: yeomans-plow !important
+div.brandCarousel a.yeomans-plow i
+    color: yeomans-plow    
+
+
+
+
 
 
 
@@ -114,19 +89,19 @@ body.yeo #breadcrumb nav i:before
 // logo size mods    
 a.jcb img
     max-height:30px !important
-a.msy img
+a.massey-ferguson img
     max-height:42px !important
-a.fdt img
+a.fendt img
     max-height:15px !important 
-a.dst img
+a.dressta img
     max-width:120px !important        
-a.ama img
+a.amazone img
     max-width:130px !important       
 a.asv img
     max-height:25px !important    
-a.mah img
+a.mahindra img
     max-width:120px !important 
-a.yeo img
+a.yeomans-plow img
     max-height:42px !important
 
 
@@ -141,3 +116,59 @@ div.ddownOuter.jcb div.ddownInner section:first-child
     border-right-color: jcb
 div.ddownOuter.jcb div.ddownInner nav i
     background-color: jcb
+
+
+
+
+
+
+/* brand silos */
+body.jcb
+    colors = '#breadcrumb nav i:before,
+    div.keyStats span,
+    div.catList i:before,
+    .brand,
+    h1, 
+    h2,
+    main a.ctaButton:hover'
+    {colors}
+        color: jcb !important
+    borders = 'main hr,
+    .thumbImg a.activeLink,
+    div.keyStats p,
+    main a.ctaButton,
+    table.rowResponsive tbody tr '
+    {borders}
+        border-color: jcb !important 
+    bgs = 'main a.ctaButton,
+    table.rowResponsive thead '
+    {bgs}
+        background-color: jcb 
+     brandHR = 'main hr'
+    {brandHR}
+        border-bottom-width: 3px
+
+body.massey-ferguson
+    colors = '#breadcrumb nav i:before,
+    div.keyStats span,
+    div.catList i:before,
+    .brand,
+    h1, 
+    h2,
+    main a.ctaButton:hover'
+    {colors}
+        color: massey-ferguson !important
+    borders = 'main hr,
+    .thumbImg a.activeLink,
+    div.keyStats p,
+    main a.ctaButton,
+    table.rowResponsive tbody tr '
+    {borders}
+        border-color: massey-ferguson !important 
+    bgs = 'main a.ctaButton,
+    table.rowResponsive thead '
+    {bgs}
+        background-color: massey-ferguson 
+     brandHR = 'main hr'
+    {brandHR}
+        border-bottom-width: 3px
