@@ -2925,6 +2925,87 @@ div.ddownOuter.jcb div.ddownInner section:first-child {
 div.ddownOuter.jcb div.ddownInner nav i {
   background-color: #fcb026;
 }
+div.ddownOuter.massey-ferguson a.ddownClose i {
+  color: #c41230;
+}
+div.ddownOuter.massey-ferguson div.ddownInner section:first-child {
+  border-right-color: #c41230;
+}
+div.ddownOuter.massey-ferguson div.ddownInner nav i {
+  background-color: #c41230;
+}
+div.ddownOuter.fendt a.ddownClose i {
+  color: #2dba03;
+}
+div.ddownOuter.fendt div.ddownInner section:first-child {
+  border-right-color: #2dba03;
+}
+div.ddownOuter.fendt div.ddownInner nav i {
+  background-color: #2dba03;
+}
+div.ddownOuter.dressta a.ddownClose i {
+  color: #047eb1;
+}
+div.ddownOuter.dressta div.ddownInner section:first-child {
+  border-right-color: #047eb1;
+}
+div.ddownOuter.dressta div.ddownInner nav i {
+  background-color: #047eb1;
+}
+div.ddownOuter.iseki a.ddownClose i {
+  color: #0068b7;
+}
+div.ddownOuter.iseki div.ddownInner section:first-child {
+  border-right-color: #0068b7;
+}
+div.ddownOuter.iseki div.ddownInner nav i {
+  background-color: #0068b7;
+}
+div.ddownOuter.claas a.ddownClose i {
+  color: #d30a00;
+}
+div.ddownOuter.claas div.ddownInner section:first-child {
+  border-right-color: #d30a00;
+}
+div.ddownOuter.claas div.ddownInner nav i {
+  background-color: #d30a00;
+}
+div.ddownOuter.amazone a.ddownClose i {
+  color: #e97714;
+}
+div.ddownOuter.amazone div.ddownInner section:first-child {
+  border-right-color: #e97714;
+}
+div.ddownOuter.amazone div.ddownInner nav i {
+  background-color: #e97714;
+}
+div.ddownOuter.asv a.ddownClose i {
+  color: #a1c02f;
+}
+div.ddownOuter.asv div.ddownInner section:first-child {
+  border-right-color: #a1c02f;
+}
+div.ddownOuter.asv div.ddownInner nav i {
+  background-color: #a1c02f;
+}
+div.ddownOuter.mahindra a.ddownClose i {
+  color: #e41937;
+}
+div.ddownOuter.mahindra div.ddownInner section:first-child {
+  border-right-color: #e41937;
+}
+div.ddownOuter.mahindra div.ddownInner nav i {
+  background-color: #e41937;
+}
+div.ddownOuter.yeomans-plow a.ddownClose i {
+  color: #ff0f00;
+}
+div.ddownOuter.yeomans-plow div.ddownInner section:first-child {
+  border-right-color: #ff0f00;
+}
+div.ddownOuter.yeomans-plow div.ddownInner nav i {
+  background-color: #ff0f00;
+}
 body.jcb #breadcrumb nav i:before,
 body.jcb div.keyStats span,
 body.jcb div.catList i:before,
