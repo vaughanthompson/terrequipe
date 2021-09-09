@@ -47,7 +47,7 @@ body > footer {
 }
 hr {
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
+  border-bottom: 3px solid #1a1a1a;
   margin: 2vw 0;
 }
 img {
@@ -932,8 +932,7 @@ div.containMNav h6 {
   }
 }
 .icon {
-  background-color: #1a1a1a;
-  color: #fff;
+  color: #1a1a1a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: box;
@@ -1841,6 +1840,7 @@ div.thirdparty-logo {
 }
 div.containSlider {
   position: relative;
+  margin-bottom: 3vw;
 }
 body.brand div.containSlider {
   margin-top: 3vw;
@@ -2028,7 +2028,8 @@ div.ddownInner picture.brand img {
   width: 100%;
   height: auto;
 }
-div.ddownInner nav a {
+div.ddownInner nav a,
+div.catItem nav a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-box;
@@ -2040,7 +2041,8 @@ div.ddownInner nav a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-div.ddownInner nav a span {
+div.ddownInner nav a span,
+div.catItem nav a span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-box;
@@ -2053,7 +2055,8 @@ div.ddownInner nav a span {
   font-size: 1.2em !important;
   line-height: 1.2em;
 }
-div.ddownInner nav a i {
+div.ddownInner nav a i,
+div.catItem nav a i {
   margin-right: 1vw;
   font-size: 30px;
   width: 60px;
@@ -2065,6 +2068,11 @@ div.ddownInner nav a i {
   flex: 0 0 auto;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+div.catItem .icon {
+  font-size: 26px;
+  width: 35px;
+  height: 35px;
 }
 div.ddownOuter {
   display: none;
@@ -2089,7 +2097,8 @@ div.ddownInner nav i {
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
-  div.ddownInner nav a:hover {
+  div.ddownInner nav a:hover,
+  div.catItem nav a:hover {
     color: #1a1a1a !important;
   }
   div.ddownInner nav a:hover i {
@@ -2138,7 +2147,7 @@ div.ddownInner nav i {
 #breadcrumb nav i {
   padding: 0 5px;
 }
-body.brand article.subhead section:last-child {
+article.subhead section:last-child {
   -webkit-align-self: stretch;
   -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -2274,6 +2283,32 @@ div.landing div.imageThumb {
         flex-basis: 14%;
     margin-right: 3.3vw;
     margin-bottom: 3vw;
+  }
+  div.catList.navs div.catGroup {
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 5vw;
+    grid-row-gap: 2.5vw;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-auto-flow: row dense;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    margin-bottom: 3vw;
+  }
+  div.catList.navs .catItem {
+    margin: 0;
+    margin-bottom: 1vw;
+    padding-bottom: 2vw;
+    border-bottom: 3px solid #000;
+    -webkit-align-self: start;
+    -ms-grid-row-align: start;
+        align-self: start;
+    -ms-flex-item-align: start;
+  }
+  div.catList.navs .catItem.jcb {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/span 3;
   }
 }
 body.model div.keyStats {
@@ -2539,6 +2574,80 @@ img.print.logo {
     padding-top: 5vw;
   }
 }
+a.smallTeaser {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1vw;
+  padding-right: 1.5vw;
+  margin-bottom: 1vw;
+  border-radius: 15px;
+  min-width: 23vw;
+  max-width: 23vw;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+a.smallTeaser span {
+  display: block;
+  -webkit-box-flex: 0;
+  -o-box-flex: 0;
+  -ms-box-flex: 0;
+  box-flex: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: #1a1a1a;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin-right: 1vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+a.smallTeaser span i {
+  color: #fff;
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  border-radius: 0;
+}
+a.smallTeaser p {
+  margin: 0;
+  font-size: 80%;
+  line-height: 130%;
+}
+a.smallTeaser p strong {
+  display: block;
+  font-size: 120%;
+  line-height: 120%;
+  margin-bottom: 0.1vw;
+}
+a.smallTeaser p u {
+  font-weight: 600;
+}
+@media (pointer: fine) {
+  a.smallTeaser:hover {
+    -webkit-box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+}
+@media (pointer: coarse) {
+  a.smallTeaser {
+    -webkit-box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+  }
+}
 a:link,
 a:visited {
   color: #1a1a1a;
@@ -2759,6 +2868,9 @@ strong {
 .small {
   font-size: 0.7em;
 }
+.price {
+  color: #f00;
+}
 body > footer p a {
   font-size: 1em;
   line-height: 160%;
@@ -2894,29 +3006,38 @@ div.brandCarousel a.yeomans-plow i {
 }
 a.jcb img {
   max-height: 30px !important;
+  width: auto !important;
 }
 a.massey-ferguson img {
   max-height: 42px !important;
+  width: auto !important;
 }
 a.fendt img {
   max-height: 15px !important;
+  width: auto !important;
 }
 a.dressta img {
   max-width: 120px !important;
+  width: auto !important;
 }
 a.amazone img {
-  max-width: 130px !important;
+  max-width: 140px !important;
+  height: auto !important;
 }
 a.asv img {
   max-height: 25px !important;
+  width: auto !important;
 }
 a.mahindra img {
   max-width: 120px !important;
+  width: auto !important;
 }
 a.yeomans-plow img {
   max-height: 42px !important;
+  width: auto !important;
 }
-div.ddownOuter.jcb a.ddownClose i {
+div.ddownOuter.jcb a.ddownClose i,
+div.catItem.jcb a i {
   color: #fcb026;
 }
 div.ddownOuter.jcb div.ddownInner section:first-child {
@@ -2925,7 +3046,11 @@ div.ddownOuter.jcb div.ddownInner section:first-child {
 div.ddownOuter.jcb div.ddownInner nav i {
   background-color: #fcb026;
 }
-div.ddownOuter.massey-ferguson a.ddownClose i {
+div.catItem.jcb {
+  border-bottom-color: #fcb026 !important;
+}
+div.ddownOuter.massey-ferguson a.ddownClose i,
+div.catItem.massey-ferguson a i {
   color: #c41230;
 }
 div.ddownOuter.massey-ferguson div.ddownInner section:first-child {
@@ -2934,7 +3059,11 @@ div.ddownOuter.massey-ferguson div.ddownInner section:first-child {
 div.ddownOuter.massey-ferguson div.ddownInner nav i {
   background-color: #c41230;
 }
-div.ddownOuter.fendt a.ddownClose i {
+div.catItem.massey-ferguson {
+  border-bottom-color: #c41230 !important;
+}
+div.ddownOuter.fendt a.ddownClose i,
+div.catItem.fendt a i {
   color: #2dba03;
 }
 div.ddownOuter.fendt div.ddownInner section:first-child {
@@ -2943,7 +3072,11 @@ div.ddownOuter.fendt div.ddownInner section:first-child {
 div.ddownOuter.fendt div.ddownInner nav i {
   background-color: #2dba03;
 }
-div.ddownOuter.dressta a.ddownClose i {
+div.catItem.fendt {
+  border-bottom-color: #2dba03 !important;
+}
+div.ddownOuter.dressta a.ddownClose i,
+div.catItem.dressta a i {
   color: #047eb1;
 }
 div.ddownOuter.dressta div.ddownInner section:first-child {
@@ -2952,7 +3085,11 @@ div.ddownOuter.dressta div.ddownInner section:first-child {
 div.ddownOuter.dressta div.ddownInner nav i {
   background-color: #047eb1;
 }
-div.ddownOuter.iseki a.ddownClose i {
+div.catItem.dressta {
+  border-bottom-color: #047eb1 !important;
+}
+div.ddownOuter.iseki a.ddownClose i,
+div.catItem.iseki a i {
   color: #0068b7;
 }
 div.ddownOuter.iseki div.ddownInner section:first-child {
@@ -2961,7 +3098,11 @@ div.ddownOuter.iseki div.ddownInner section:first-child {
 div.ddownOuter.iseki div.ddownInner nav i {
   background-color: #0068b7;
 }
-div.ddownOuter.claas a.ddownClose i {
+div.catItem.iseki {
+  border-bottom-color: #0068b7 !important;
+}
+div.ddownOuter.claas a.ddownClose i,
+div.catItem.claas a i {
   color: #d30a00;
 }
 div.ddownOuter.claas div.ddownInner section:first-child {
@@ -2970,7 +3111,11 @@ div.ddownOuter.claas div.ddownInner section:first-child {
 div.ddownOuter.claas div.ddownInner nav i {
   background-color: #d30a00;
 }
-div.ddownOuter.amazone a.ddownClose i {
+div.catItem.claas {
+  border-bottom-color: #d30a00 !important;
+}
+div.ddownOuter.amazone a.ddownClose i,
+div.catItem.amazone a i {
   color: #e97714;
 }
 div.ddownOuter.amazone div.ddownInner section:first-child {
@@ -2979,7 +3124,11 @@ div.ddownOuter.amazone div.ddownInner section:first-child {
 div.ddownOuter.amazone div.ddownInner nav i {
   background-color: #e97714;
 }
-div.ddownOuter.asv a.ddownClose i {
+div.catItem.amazone {
+  border-bottom-color: #e97714 !important;
+}
+div.ddownOuter.asv a.ddownClose i,
+div.catItem.asv a i {
   color: #a1c02f;
 }
 div.ddownOuter.asv div.ddownInner section:first-child {
@@ -2988,7 +3137,11 @@ div.ddownOuter.asv div.ddownInner section:first-child {
 div.ddownOuter.asv div.ddownInner nav i {
   background-color: #a1c02f;
 }
-div.ddownOuter.mahindra a.ddownClose i {
+div.catItem.asv {
+  border-bottom-color: #a1c02f !important;
+}
+div.ddownOuter.mahindra a.ddownClose i,
+div.catItem.mahindra a i {
   color: #e41937;
 }
 div.ddownOuter.mahindra div.ddownInner section:first-child {
@@ -2997,7 +3150,11 @@ div.ddownOuter.mahindra div.ddownInner section:first-child {
 div.ddownOuter.mahindra div.ddownInner nav i {
   background-color: #e41937;
 }
-div.ddownOuter.yeomans-plow a.ddownClose i {
+div.catItem.mahindra {
+  border-bottom-color: #e41937 !important;
+}
+div.ddownOuter.yeomans-plow a.ddownClose i,
+div.catItem.yeomans-plow a i {
   color: #ff0f00;
 }
 div.ddownOuter.yeomans-plow div.ddownInner section:first-child {
@@ -3005,6 +3162,9 @@ div.ddownOuter.yeomans-plow div.ddownInner section:first-child {
 }
 div.ddownOuter.yeomans-plow div.ddownInner nav i {
   background-color: #ff0f00;
+}
+div.catItem.yeomans-plow {
+  border-bottom-color: #ff0f00 !important;
 }
 body.jcb #breadcrumb nav i:before,
 body.jcb div.keyStats span,
@@ -3050,6 +3210,190 @@ body.massey-ferguson table.rowResponsive thead {
   background-color: #c41230;
 }
 body.massey-ferguson main hr {
+  border-bottom-width: 3px;
+}
+body.fendt #breadcrumb nav i:before,
+body.fendt div.keyStats span,
+body.fendt div.catList i:before,
+body.fendt .brand,
+body.fendt h1,
+body.fendt h2,
+body.fendt main a.ctaButton:hover {
+  color: #2dba03 !important;
+}
+body.fendt main hr,
+body.fendt .thumbImg a.activeLink,
+body.fendt div.keyStats p,
+body.fendt main a.ctaButton,
+body.fendt table.rowResponsive tbody tr {
+  border-color: #2dba03 !important;
+}
+body.fendt main a.ctaButton,
+body.fendt table.rowResponsive thead {
+  background-color: #2dba03;
+}
+body.fendt main hr {
+  border-bottom-width: 3px;
+}
+body.dressta #breadcrumb nav i:before,
+body.dressta div.keyStats span,
+body.dressta div.catList i:before,
+body.dressta .brand,
+body.dressta h1,
+body.dressta h2,
+body.dressta main a.ctaButton:hover {
+  color: #047eb1 !important;
+}
+body.dressta main hr,
+body.dressta .thumbImg a.activeLink,
+body.dressta div.keyStats p,
+body.dressta main a.ctaButton,
+body.dressta table.rowResponsive tbody tr {
+  border-color: #047eb1 !important;
+}
+body.dressta main a.ctaButton,
+body.dressta table.rowResponsive thead {
+  background-color: #047eb1;
+}
+body.dressta main hr {
+  border-bottom-width: 3px;
+}
+body.iseki #breadcrumb nav i:before,
+body.iseki div.keyStats span,
+body.iseki div.catList i:before,
+body.iseki .brand,
+body.iseki h1,
+body.iseki h2,
+body.iseki main a.ctaButton:hover {
+  color: #0068b7 !important;
+}
+body.iseki main hr,
+body.iseki .thumbImg a.activeLink,
+body.iseki div.keyStats p,
+body.iseki main a.ctaButton,
+body.iseki table.rowResponsive tbody tr {
+  border-color: #0068b7 !important;
+}
+body.iseki main a.ctaButton,
+body.iseki table.rowResponsive thead {
+  background-color: #0068b7;
+}
+body.iseki main hr {
+  border-bottom-width: 3px;
+}
+body.claas #breadcrumb nav i:before,
+body.claas div.keyStats span,
+body.claas div.catList i:before,
+body.claas .brand,
+body.claas h1,
+body.claas h2,
+body.claas main a.ctaButton:hover {
+  color: #d30a00 !important;
+}
+body.claas main hr,
+body.claas .thumbImg a.activeLink,
+body.claas div.keyStats p,
+body.claas main a.ctaButton,
+body.claas table.rowResponsive tbody tr {
+  border-color: #d30a00 !important;
+}
+body.claas main a.ctaButton,
+body.claas table.rowResponsive thead {
+  background-color: #d30a00;
+}
+body.claas main hr {
+  border-bottom-width: 3px;
+}
+body.amazone #breadcrumb nav i:before,
+body.amazone div.keyStats span,
+body.amazone div.catList i:before,
+body.amazone .brand,
+body.amazone h1,
+body.amazone h2,
+body.amazone main a.ctaButton:hover {
+  color: #e97714 !important;
+}
+body.amazone main hr,
+body.amazone .thumbImg a.activeLink,
+body.amazone div.keyStats p,
+body.amazone main a.ctaButton,
+body.amazone table.rowResponsive tbody tr {
+  border-color: #e97714 !important;
+}
+body.amazone main a.ctaButton,
+body.amazone table.rowResponsive thead {
+  background-color: #e97714;
+}
+body.amazone main hr {
+  border-bottom-width: 3px;
+}
+body.asv #breadcrumb nav i:before,
+body.asv div.keyStats span,
+body.asv div.catList i:before,
+body.asv .brand,
+body.asv h1,
+body.asv h2,
+body.asv main a.ctaButton:hover {
+  color: #a1c02f !important;
+}
+body.asv main hr,
+body.asv .thumbImg a.activeLink,
+body.asv div.keyStats p,
+body.asv main a.ctaButton,
+body.asv table.rowResponsive tbody tr {
+  border-color: #a1c02f !important;
+}
+body.asv main a.ctaButton,
+body.asv table.rowResponsive thead {
+  background-color: #a1c02f;
+}
+body.asv main hr {
+  border-bottom-width: 3px;
+}
+body.mahindra #breadcrumb nav i:before,
+body.mahindra div.keyStats span,
+body.mahindra div.catList i:before,
+body.mahindra .brand,
+body.mahindra h1,
+body.mahindra h2,
+body.mahindra main a.ctaButton:hover {
+  color: #e41937 !important;
+}
+body.mahindra main hr,
+body.mahindra .thumbImg a.activeLink,
+body.mahindra div.keyStats p,
+body.mahindra main a.ctaButton,
+body.mahindra table.rowResponsive tbody tr {
+  border-color: #e41937 !important;
+}
+body.mahindra main a.ctaButton,
+body.mahindra table.rowResponsive thead {
+  background-color: #e41937;
+}
+body.mahindra main hr {
+  border-bottom-width: 3px;
+}
+body.yeomans-plow #breadcrumb nav i:before,
+body.yeomans-plow div.keyStats span,
+body.yeomans-plow div.catList i:before,
+body.yeomans-plow .brand,
+body.yeomans-plow h1,
+body.yeomans-plow h2,
+body.yeomans-plow main a.ctaButton:hover {
+  color: #ff0f00 !important;
+}
+body.yeomans-plow main hr,
+body.yeomans-plow .thumbImg a.activeLink,
+body.yeomans-plow div.keyStats p,
+body.yeomans-plow main a.ctaButton,
+body.yeomans-plow table.rowResponsive tbody tr {
+  border-color: #ff0f00 !important;
+}
+body.yeomans-plow main a.ctaButton,
+body.yeomans-plow table.rowResponsive thead {
+  background-color: #ff0f00;
+}
+body.yeomans-plow main hr {
   border-bottom-width: 3px;
 }
 /* effects */
