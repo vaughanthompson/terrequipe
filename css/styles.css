@@ -1045,7 +1045,7 @@ a.ctaButton {
   color: #fff;
   background-color: #646464;
   padding: 1vw 1.5vw 1vw 1.5vw;
-  margin-bottom: 7px;
+  margin-bottom: 0.6vw;
   display: inline-block;
   white-space: nowrap;
   border-radius: 2em;
@@ -1057,12 +1057,12 @@ div#masthead a.majorCTA {
 }
 a.ctaButton {
   border-radius: 50px;
-  background: #1a1a1a;
+  background: #c8c8c8;
   color: #fff !important;
   font-size: 0.95em;
   font-weight: 500;
-  border: 1px solid #1a1a1a;
-  padding: 0.9vw 2vw 1vw 2vw;
+  border: 1px solid #c8c8c8;
+  padding: 1vw 2vw 1vw 2vw;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-box;
@@ -1075,8 +1075,14 @@ a.ctaButton {
   transition: 0.2s;
   white-space: normal;
 }
+a.ctaButton.ctaShop {
+  background: #00dc6e;
+  border-color: #00dc6e;
+  color: #fff !important;
+}
 nav a.ctaButton {
   background: none;
+  border-color: #1a1a1a;
   color: #1a1a1a !important;
   margin-left: 0;
   margin-right: 1.5vw;
@@ -2732,8 +2738,8 @@ body.darkSlider > header.fixed nav a.activeLink {
 }
 body.darkSlider > header.fixed nav a,
 body.darkSlider > header.fixed nav a.ctaButton {
-  color: #969696 !important;
-  border-color: #969696 !important;
+  color: #c8c8c8 !important;
+  border-color: #c8c8c8 !important;
 }
 body.darkSlider > header.fixed nav a:hover {
   color: #000 !important;
@@ -2929,7 +2935,7 @@ body > footer h6 {
     font-weight: 650;
     letter-spacing: -0.045em;
     text-indent: -0.08em;
-    color: #969696;
+    color: #c8c8c8;
   }
 }
 /*
