@@ -907,12 +907,17 @@ i.toggleIcon.upDown:before
     .toggleIcon
     a.slideToggleTrigger
         display: none
-.catItem h6
+.catItem a h6
     font-weight: 500
     text-decoration: underline
     max-width:90%
-.catItem:hover h6
+.catItem:hover a h6
     text-decoration: none
+.catItem a h3
+    text-decoration: underline
+.catItem:hover a h3
+    text-decoration: none
+
 div.keyStats
     margin-top: 1em
 div.keyStats p
@@ -937,6 +942,11 @@ div.landing div.imageThumb
     max-width: 9vw
     height:6vw
 @media dtrigger
+    div.keyStats.careers
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-top: marXS
     main > div.catList
         margin: marStd auto marStd auto
         padding: padXXS 0 padXXS 0

@@ -2215,12 +2215,18 @@ i.toggleIcon.upDown:before {
     display: none;
   }
 }
-.catItem h6 {
+.catItem a h6 {
   font-weight: 500;
   text-decoration: underline;
   max-width: 90%;
 }
-.catItem:hover h6 {
+.catItem:hover a h6 {
+  text-decoration: none;
+}
+.catItem a h3 {
+  text-decoration: underline;
+}
+.catItem:hover a h3 {
   text-decoration: none;
 }
 div.keyStats {
@@ -2251,6 +2257,21 @@ div.landing div.imageThumb {
   height: 6vw;
 }
 @media screen and (min-width: 1100px) {
+  div.keyStats.careers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -o-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-top: 1.5vw;
+  }
   main > div.catList {
     margin: 2vw auto 2vw auto;
     padding: 1vw 0 1vw 0;
@@ -2852,8 +2873,10 @@ h6 {
 p {
   font-weight: 350;
   font-size: 0.95em;
-  line-height: 1.35em;
+  line-height: 1.4em;
   letter-spacing: -0.025em;
+  margin-top: 1vw;
+  margin-bottom: 1.5vw;
 }
 li {
   font-weight: 350;
