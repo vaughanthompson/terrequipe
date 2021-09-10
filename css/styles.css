@@ -1057,11 +1057,11 @@ div#masthead a.majorCTA {
 }
 a.ctaButton {
   border-radius: 50px;
-  background: #c8c8c8;
+  background: #b4b4b4;
   color: #fff !important;
   font-size: 0.95em;
   font-weight: 500;
-  border: 1px solid #c8c8c8;
+  border: 1px solid #b4b4b4;
   padding: 1vw 2vw 1vw 2vw;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2738,8 +2738,8 @@ body.darkSlider > header.fixed nav a.activeLink {
 }
 body.darkSlider > header.fixed nav a,
 body.darkSlider > header.fixed nav a.ctaButton {
-  color: #c8c8c8 !important;
-  border-color: #c8c8c8 !important;
+  color: #b4b4b4 !important;
+  border-color: #b4b4b4 !important;
 }
 body.darkSlider > header.fixed nav a:hover {
   color: #000 !important;
@@ -2935,7 +2935,7 @@ body > footer h6 {
     font-weight: 650;
     letter-spacing: -0.045em;
     text-indent: -0.08em;
-    color: #c8c8c8;
+    color: #b4b4b4;
   }
 }
 /*
