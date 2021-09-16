@@ -80,7 +80,10 @@
         padding: padXXS 0 0 0
         display: flex
         justify-content: space-between
-    main > article.subhead
+    main > article.blog
+        display: block
+    main > article.subhead,
+    main > article.blog
         margin-top: 0
     main > article section
         flex-basis: 47%
@@ -96,6 +99,13 @@
         padding-right: 0 
     main > article.sideBarLeft section:last-child
         flex-basis: 75%   
+    main > article.blog section
+        max-width:80%
+        padding:padXS padL 0 padL
+        margin:0px auto
+    main > article.blog section:first-child,
+    main > article.blog section:last-child
+        padding-right:padXL*2
 
     body > footer
         display: flex
@@ -128,6 +138,9 @@
     body > footer
         padding-left: padXL
         padding-right: padXL
+    main > article.blog section:first-child,
+    main > article.blog section:last-child
+        padding-right:padXL*4
 
 .picturefill-background
     overflow hidden

@@ -203,7 +203,11 @@ img {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  main > article.subhead {
+  main > article.blog {
+    display: block;
+  }
+  main > article.subhead,
+  main > article.blog {
     margin-top: 0;
   }
   main > article section {
@@ -229,6 +233,15 @@ img {
   main > article.sideBarLeft section:last-child {
     -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
+  }
+  main > article.blog section {
+    max-width: 80%;
+    padding: 1.5vw 5vw 0 5vw;
+    margin: 0px auto;
+  }
+  main > article.blog section:first-child,
+  main > article.blog section:last-child {
+    padding-right: 14vw;
   }
   body > footer {
     display: -webkit-box;
@@ -284,6 +297,10 @@ img {
   body > footer {
     padding-left: 7vw;
     padding-right: 7vw;
+  }
+  main > article.blog section:first-child,
+  main > article.blog section:last-child {
+    padding-right: 28vw;
   }
 }
 .picturefill-background {
