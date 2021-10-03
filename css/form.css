@@ -13,7 +13,6 @@ input:focus {outline:none;}
 }
 
 .floating {
-    margin-bottom: 2rem;
     background-color: var(--field__background);
     transition: background-color 0.2s ease;
     border-top-left-radius: 4px;
@@ -163,7 +162,6 @@ html {
   padding: 1rem 2rem;
   font-weight: 500;
   font-size: 1.1em;
-  margin-top: 2em;
 }
 
 
@@ -206,4 +204,19 @@ div.forms select {
 }
 select::-ms-expand {
     display: none;
+}
+
+
+
+
+div.forms > div {
+  border:1px solid red;
+  margin:1.5em auto;
+}
+
+
+
+
+textarea {
+  min-width: 90%;
 }
