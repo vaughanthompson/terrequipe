@@ -227,3 +227,24 @@ div.forms textarea {
   min-height: 10vh;
   padding:5px;
 }
+
+
+span.field-validation-error {
+  display: inline-block;
+  padding:0em 1rem 2rem 1rem;
+  color: red;
+}
+
+div.validation-summary-errors {
+  display: inline-block;
+  padding:0 1rem 0rem 1rem;
+  color: red;
+  margin-bottom: 0 !important;
+}
+div.validation-summary-errors ul {
+  margin:0;
+}
+
+span.field-validation-error::before {
+  content: '^ ';
+}

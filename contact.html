@@ -286,6 +286,9 @@
 
             <div class="contentDiv">
                 <div class="form forms">
+                    
+                    <div id="ValidationSummary" class="text-danger validation-summary-errors" data-valmsg-summary="true"><ul><li>The First name field is required.</li><li>The Email field is required.</li></ul></div>
+
 
                     <div class="other__inputs">
                         <label>Subject:&nbsp;&nbsp;</label>
@@ -327,8 +330,10 @@
                     <div class="floating">
                       <input id="input__name" class="floating__input" name="Contact Name" type="text" placeholder="Name" />
                       <label for="input__name" class="floating__label" data-content="Contact Name">
-                      <span class="hidden--visually">Contact Name</span></label>
+                      <span class="hidden--visually">Contact Name</span></label>  
                     </div>
+
+                    <span class="field-validation-error" data-valmsg-for="FirstName" data-valmsg-replace="true"><span id="FirstName-error" class="">The Name field is required.</span></span>
 
                     <div class="floating">
                         <input id="input__email" class="floating__input" name="Email Address" type="text" placeholder="Email Address" />
