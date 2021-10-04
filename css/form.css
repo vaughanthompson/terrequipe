@@ -25,7 +25,7 @@ input:focus {outline:none;}
 }
 
 .floating__input {
-  padding: 1.8rem 1rem 0.6rem;
+  padding: 1.6rem 1rem 0.8rem;
   font-size: 1rem;
   border: none;
   background: none;
@@ -38,7 +38,7 @@ input:focus {outline:none;}
 
 .other__inputs {
   background-color: var(--field__background);
-  padding: 1.2rem 1rem 1.2rem 1rem;
+  padding: 1rem 1rem 1.2rem 1rem;
   font-size: 1rem;
   font-weight: 500;
   border: none;
@@ -46,6 +46,12 @@ input:focus {outline:none;}
   width:100%;
   caret-color: var(--color__accent);
   font-family: 'Inter VF','Inter';
+}
+
+.other__inputs label {
+  display: block;
+  line-height: 1.4em;
+  margin-bottom: 5px;
 }
 
 
@@ -210,13 +216,14 @@ select::-ms-expand {
 
 
 div.forms > div {
-  border:1px solid red;
   margin:1.5em auto;
 }
 
 
 
 
-textarea {
-  min-width: 90%;
+div.forms textarea {
+  min-width: 95%;
+  min-height: 10vh;
+  padding:5px;
 }
