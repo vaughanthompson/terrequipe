@@ -248,3 +248,22 @@ div.validation-summary-errors ul {
 span.field-validation-error::before {
   content: '^ ';
 }
+
+
+div.submitW input[type=submit] {
+  display: inline-block;
+}
+div.submitW input[type=submit].inactive {
+opacity:0.5;
+background-color: #cccccc;
+}
+
+p.confirmation {
+  display: inline-block;
+  padding:1rem 1.5rem;
+  margin-left: 0.5em;
+  border-radius: 4px;
+  font-weight:500;
+  color: #ffffff;
+  background-color: rgba(0,220,110,1.0);
+}
