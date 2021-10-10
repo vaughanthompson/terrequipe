@@ -2015,6 +2015,7 @@ div.ddownOuter {
   display: box;
   display: flex;
   min-height: 50vh;
+  border-bottom: 1px solid #000;
 }
 div.ddownInner {
   padding: 3vw;
@@ -2140,6 +2141,7 @@ div.ddownInner nav i {
     color: #1a1a1a !important;
   }
   div.ddownInner nav a:hover i {
+    color: #fff !important;
     background-color: #000 !important;
     -webkit-transition: 0.4s;
     transition: 0.4s;
