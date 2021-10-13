@@ -85,8 +85,9 @@ a.ctaButton
     font-weight: 500
 div#masthead a.majorCTA
     color: white !important
-a.ctaButton
-    border-radius: 50px
+a.ctaButton,
+span.ctaButton
+    border-radius: 10px
     background: brand4
     color: white !important
     font-size: 0.95em
@@ -102,6 +103,20 @@ a.ctaButton.ctaShop
     background: good    
     border-color: good    
     color: white !important
+div.containSlider div.content div > a
+    border-radius: 10px
+    color: brand1
+    background-color: brand5
+    font-size: 0.95em
+    font-weight:500
+    border: 1px solid brand5
+    padding:padXXS padStd padXXS padStd
+    text-decoration: none
+    display: inline-flex
+    justify-content: space-between
+    transition: 0.2s
+    white-space: normal
+
 
 nav a.ctaButton
     background:none
@@ -120,12 +135,20 @@ a.ctaButton i
 a.ctaButton i:before
     color: white
 a.ctaButton:hover,
-a.ctaButton:hover > i:before
+a.ctaButton:hover > i:before,
+span.ctaButton:hover,
+span.ctaButton:hover > i:before
     background: none !important
     color: brand2 !important
     border-color: brand2 !important
     border-bottom-color: brand2 !important
-    transition: 0.2s 
+    transition: 0.2s
+div.containSlider div.content div > a:hover
+    background: none !important
+    color: white !important
+    border-color: white !important
+    border-bottom-color: white !important
+    transition: 0.2s     
 a.ctaButton:hover i
     margin-left:25px
     margin-right:0px
@@ -1219,10 +1242,10 @@ a.smallTeaser
     display:inline-flex
     align-items: center
     background-color: white
-    padding: padXXS
+    padding: padXXS*.75
     padding-right: padXS
     margin-bottom: marXXS
-    border-radius: 15px
+    border-radius: 6px
     min-width: 23vw
     max-width: 23vw
     transition: 0.15s
@@ -1233,8 +1256,8 @@ a.smallTeaser span
     background-color: brand1
     width: 70px
     height: 70px
-    border-radius: 10px
-    margin-right: marXXS
+    border-radius: 4px
+    margin-right: 1em
     background-position: center
     background-size: cover
     background-repeat: no-repeat
@@ -1258,11 +1281,40 @@ a.smallTeaser p u
     font-weight: 600
 @media (pointer: fine)    
     a.smallTeaser:hover
-        box-shadow: 0 0 20px 10px blackAlp10
+        box-shadow: 0 0 10px 5px blackAlp10
         transition: 0.25s
 @media (pointer: coarse)
     a.smallTeaser
-        box-shadow: 0 0 20px 10px blackAlp10
+        box-shadow: 0 0 10px 5px blackAlp10
+div.smallTeasers
+    display:flex
+    flex-wrap: wrap
+    justify-content: space-around
+    padding: 0 padXS padXXS
+    column-gap: marXS
+    row-gap: marXXS
+div.smallTeasers > a
+    min-width:90vw
+    max-width:90vw
+    margin:marXS 0
+@media ttrigger
+    div.smallTeasers > a
+        min-width:43vw
+        max-width:43vw
+        margin:marXXS 0
+@media dtrigger
+    div.smallTeasers
+        margin-left:marM
+        margin-right:marM
+    div.smallTeasers > a
+        min-width:auto
+        max-width:auto
+        flex: 1 1 20%
+        margin:0
+
+   
+
+
 
 
 // map
@@ -1287,4 +1339,44 @@ a.smallTeaser p u
         width:100%
         height:60vh
     
+
+
+
+
+// home feature cat items
+body.home div.catList h6
+    font-weight:700
+    font-size:1.3em
+span.ctaButton 
+    margin-top:marXS
+    margin-bottom: 0
+    margin-top:auto
+body.home div.catList
+    margin: marM auto marM auto
+    padding: padXXS 0 padXXS 0
+@media dtrigger
+    body.home div.catList
+        margin-left: marL
+        margin-right: marL
+    body.home div.catList div.catGroup
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-top: marStd
+        margin-bottom: marXS
+    body.home div.catList a.catItem
+        display:flex
+        flex-direction:column
+        justify-content:flex-start
+        flex-basis: 30%
+        margin: 0
+        padding:padXS
+        padding-bottom:padStd
+        border-radius: 10px
+        box-shadow: 0 0 10px 5px blackAlp10
+    body.home div.catList a.catItem div.imageThumb
+        height: 13vw
+    body.home div.catList a.catItem div.keyStats
+        margin-bottom: marXS
+        margin-top: 0
 

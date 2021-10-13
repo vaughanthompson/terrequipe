@@ -1081,8 +1081,9 @@ a.ctaButton {
 div#masthead a.majorCTA {
   color: #fff !important;
 }
-a.ctaButton {
-  border-radius: 50px;
+a.ctaButton,
+span.ctaButton {
+  border-radius: 10px;
   background: #b4b4b4;
   color: #fff !important;
   font-size: 0.95em;
@@ -1106,6 +1107,27 @@ a.ctaButton.ctaShop {
   border-color: #00dc6e;
   color: #fff !important;
 }
+div.containSlider div.content div > a {
+  border-radius: 10px;
+  color: #1a1a1a;
+  background-color: #fff;
+  font-size: 0.95em;
+  font-weight: 500;
+  border: 1px solid #fff;
+  padding: 1vw 2vw 1vw 2vw;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  white-space: normal;
+}
 nav a.ctaButton {
   background: none;
   border-color: #1a1a1a;
@@ -1126,11 +1148,21 @@ a.ctaButton i:before {
   color: #fff;
 }
 a.ctaButton:hover,
-a.ctaButton:hover > i:before {
+a.ctaButton:hover > i:before,
+span.ctaButton:hover,
+span.ctaButton:hover > i:before {
   background: none !important;
   color: #000 !important;
   border-color: #000 !important;
   border-bottom-color: #000 !important;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+div.containSlider div.content div > a:hover {
+  background: none !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  border-bottom-color: #fff !important;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -2645,10 +2677,10 @@ a.smallTeaser {
   -ms-flex-align: center;
   align-items: center;
   background-color: #fff;
-  padding: 1vw;
+  padding: 0.75vw;
   padding-right: 1.5vw;
   margin-bottom: 1vw;
-  border-radius: 15px;
+  border-radius: 6px;
   min-width: 23vw;
   max-width: 23vw;
   -webkit-transition: 0.15s;
@@ -2667,8 +2699,8 @@ a.smallTeaser span {
   background-color: #1a1a1a;
   width: 70px;
   height: 70px;
-  border-radius: 10px;
-  margin-right: 1vw;
+  border-radius: 4px;
+  margin-right: 1em;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2697,16 +2729,64 @@ a.smallTeaser p u {
 }
 @media (pointer: fine) {
   a.smallTeaser:hover {
-    -webkit-box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
-    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
     -webkit-transition: 0.25s;
     transition: 0.25s;
   }
 }
 @media (pointer: coarse) {
   a.smallTeaser {
-    -webkit-box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
-    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+  }
+}
+div.smallTeasers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: distribute;
+  -o-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  padding: 0 1.5vw 1vw;
+  -webkit-column-gap: 1.5vw;
+  -moz-column-gap: 1.5vw;
+  column-gap: 1.5vw;
+  row-gap: 1vw;
+}
+div.smallTeasers > a {
+  min-width: 90vw;
+  max-width: 90vw;
+  margin: 1.5vw 0;
+}
+@media screen and (min-width: 750px) {
+  div.smallTeasers > a {
+    min-width: 43vw;
+    max-width: 43vw;
+    margin: 1vw 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  div.smallTeasers {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+  div.smallTeasers > a {
+    min-width: auto;
+    max-width: auto;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
+    margin: 0;
   }
 }
 .map {
@@ -2727,6 +2807,71 @@ a.smallTeaser p u {
   .map.large {
     width: 100%;
     height: 60vh;
+  }
+}
+body.home div.catList h6 {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+span.ctaButton {
+  margin-top: 1.5vw;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+body.home div.catList {
+  margin: 3vw auto 3vw auto;
+  padding: 1vw 0 1vw 0;
+}
+@media screen and (min-width: 1100px) {
+  body.home div.catList {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  body.home div.catList div.catGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -o-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  body.home div.catList a.catItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -o-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -o-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin: 0;
+    padding: 1.5vw;
+    padding-bottom: 2vw;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+  }
+  body.home div.catList a.catItem div.imageThumb {
+    height: 13vw;
+  }
+  body.home div.catList a.catItem div.keyStats {
+    margin-bottom: 1.5vw;
+    margin-top: 0;
   }
 }
 a:link,
@@ -2764,7 +2909,7 @@ ul li {
 }
 *.picturefill-background,
 *.picturefill-background a {
-  color: #1a1a1a;
+  color: #fff;
 }
 @media screen and (min-width: 750px) {
   *.picturefill-background.lighten1,
@@ -3086,6 +3231,46 @@ div.brandCarousel a.yeomans-plow {
 }
 div.brandCarousel a.yeomans-plow i {
   color: #ff0f00;
+}
+.ctaButton.jcb {
+  background-color: #fcb026 !important;
+  border-color: #fcb026 !important;
+}
+.ctaButton.massey-ferguson {
+  background-color: #c41230 !important;
+  border-color: #c41230 !important;
+}
+.ctaButton.fendt {
+  background-color: #2dba03 !important;
+  border-color: #2dba03 !important;
+}
+.ctaButton.dressta {
+  background-color: #047eb1 !important;
+  border-color: #047eb1 !important;
+}
+.ctaButton.iseki {
+  background-color: #0068b7 !important;
+  border-color: #0068b7 !important;
+}
+.ctaButton.claas {
+  background-color: #d30a00 !important;
+  border-color: #d30a00 !important;
+}
+.ctaButton.amazone {
+  background-color: #e97714 !important;
+  border-color: #e97714 !important;
+}
+.ctaButton.asv {
+  background-color: #a1c02f !important;
+  border-color: #a1c02f !important;
+}
+.ctaButton.mahindra {
+  background-color: #e41937 !important;
+  border-color: #e41937 !important;
+}
+.ctaButton.yeomans-plow {
+  background-color: #ff0f00 !important;
+  border-color: #ff0f00 !important;
 }
 a.jcb img {
   max-height: 30px !important;
