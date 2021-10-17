@@ -252,6 +252,18 @@ img {
   main > article.contact {
     padding: 2vw 7vw 2vw 7vw;
   }
+  main > article.insetContent div.content {
+    -webkit-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  main > article.insetContent section {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
   body > footer {
     display: -webkit-box;
     display: -ms-flexbox;
