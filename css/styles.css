@@ -2061,6 +2061,9 @@ div.ddownOuter {
   min-height: 50vh;
   border-bottom: 1px solid #000;
 }
+div.ddownOuter i.icon {
+  color: #fff;
+}
 div.ddownInner {
   padding: 3vw;
   margin-right: 3vw;
@@ -2072,6 +2075,7 @@ div.ddownInner {
   -o-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  min-height: 50vh;
 }
 div.ddownInner section {
   -webkit-box-flex: 1;
