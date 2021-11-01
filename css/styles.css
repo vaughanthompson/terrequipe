@@ -2012,9 +2012,10 @@ div.brandCarousel .slick-prev:before,
 div.brandCarousel .slick-next:before {
   font-family: 'icomoon';
   font-size: 22px;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  color: #000;
 }
 div.brandCarousel .slick-prev:before {
   content: '\e905';
