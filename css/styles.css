@@ -1121,7 +1121,7 @@ a.ctaButton.ctaShop {
 }
 div.containSlider div.content div > a {
   border-radius: 10px;
-  color: #1a1a1a;
+  color: #1a1a1a !important;
   background-color: #fff;
   font-size: 0.95em;
   font-weight: 500;
@@ -1139,6 +1139,7 @@ div.containSlider div.content div > a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   white-space: normal;
+  margin-top: 1.5em;
 }
 nav a.ctaButton {
   background: none;
