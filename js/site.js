@@ -56,10 +56,12 @@
             }
         },
             offset: '5%'
+        
         });
-*/
+ */
 
        
+/* add nav to sliders */
 
 
     $(".slickSlider").slick({
