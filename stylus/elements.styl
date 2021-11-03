@@ -100,6 +100,9 @@ span.ctaButton
     justify-content: space-between
     transition: 0.2s
     white-space: normal
+    @media phoneRule
+        padding: padM padL
+        font-weight: 300
 a.ctaButton.ctaShop
     background: good    
     border-color: good    
@@ -118,7 +121,9 @@ div.containSlider div.content div > a
     transition: 0.2s
     white-space: normal
     margin-top: 1.5em;
-
+    @media phoneRule
+        padding padM padL
+        font-weight: 300
 
 nav a.ctaButton
     background:none
@@ -205,6 +210,9 @@ header.sticky .imgText
     @media phoneRule
         font-size: .5em
         //display: none
+@media phoneRule
+    .txtC_Sc
+        margin-right:5px
 
 a.imgText
     border: 1px solid rgba(0,0,0,0)
@@ -212,12 +220,19 @@ a.imgText:hover
     border:1px solid blackAlp10
 a.imgText.siteLogo
     border:none
+
+
   
 .imgText span.txtC
     display: flex
     flex-direction: column
     justify-content: center 
-    padding: 1px 0    
+    padding: 1px 0  
+    @media phoneRule
+        width: 100%
+        flex-direction: row 
+        justify-content: flex-start 
+        
 header.sticky .imgText span.txtC
     flex-direction: row
     align-items: baseline
@@ -277,10 +292,15 @@ header.sticky .imgText.stacked picture
 .mLogo.long picture 
     max-width:150px !important
     @media phoneRule
-        margin-bottom: 0px
+        max-width:175px !important
+        margin-bottom: 7px
+        margin-top: 7px
 .mLogo.long img
     max-height:100% !important
     max-width:150px !important
+    @media phoneRule
+        max-width:175px !important
+        
 
 
 .inpage-logo
@@ -848,6 +868,8 @@ div.catItem .icon
     font-size:36px
     width: 35px
     height: 35px
+    @media phoneRule
+        font-size: 25px
 
 div.ddownOuter
     display: none;
@@ -891,6 +913,10 @@ div.ddownInner nav i
 // breadcrumb
 #breadcrumb
     margin-bottom: marStd*1.2
+    @media phoneRule
+        margin-bottom: marXL
+        padding-bottom: padXS
+        border-bottom: 1px solid blackAlp10
 #breadcrumb nav
     display: inline-flex
     align-items: center
@@ -902,8 +928,12 @@ div.ddownInner nav i
 #breadcrumb nav a,
 #breadcrumb nav a.activeLink
     font-weight: 500 !important
+    @media phoneRule
+        margin-right:5px
 #breadcrumb nav i
-    padding: 0 5px   
+    padding: 0 5px  
+    @media phoneRule
+        padding: 0 5px 0 0
 
 
 
@@ -926,9 +956,19 @@ body.brand article.subhead picture.brand
     display: inline-block
     width:130px
     margin: marStd marL marStd 0
+    @media phoneRule
+        width:100px
+        margin-bottom: marXL
 body.brand article.subhead img
     width:100% 
     height: auto    
+@media phoneRule
+    article.subhead section:last-child
+        display: block
+        padding-top:0 !important
+    article.subhead a.smallTeaser
+        display: none
+
 
 
 // cat
@@ -943,6 +983,19 @@ i.toggleIcon.upDown:before
     .toggleIcon
     a.slideToggleTrigger
         display: none
+    div.catGroup a.catItem,
+    div.catGroup div.catItem
+        display: block
+        margin: marXL 0 marXL*1.5 0 
+    .catItem h6
+        font-weight: 700
+    div.imageThumb
+        height: 60vw !important
+        margin-bottom: 5vh !important
+    div.landing div.imageThumb
+        max-width: 100vw  !important
+        height:60vw !important
+
 .catItem a h6
     font-weight: 500
     text-decoration: underline
@@ -1040,6 +1093,8 @@ div.landing div.imageThumb
 body.model div.keyStats
     margin-top: marM
     margin-bottom: marXXS
+    @media phoneRule
+        margin-bottom: marM
 body.model div.keyStats p
     font-weight: 600
     margin: 0
@@ -1047,6 +1102,10 @@ body.model div.keyStats p
     margin-bottom: marXXS
     max-width:100%
     border-bottom: 1px solid brand1
+    @media phoneRule
+        margin-bottom: marM
+
+
 body.model div.keyStats p a
     font-weight:300
 body.model div.keyStats p:last-child
@@ -1080,22 +1139,27 @@ body.model .catItem h6
 
 
 // model gallery
-div.gallery {
+div.gallery 
     margin-bottom: marXS
     width: 100%
-}
-div.gallery div.galleryItem {
+    @media phoneRule
+        margin-top: marXL
+
+div.gallery div.galleryItem
     min-height: 37vw
     background-color: #cccccc
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-}
+    @media phoneRule
+        min-height: 40vh
+        margin-bottom: 1em
+
 /* gallery height */
 
-div.gallery div.galleryItem div.pbVideo iframe {
+div.gallery div.galleryItem div.pbVideo iframe
     height: 37vw;
-}
+
 .thumbImg {
     margin: marXXS*.5 0
     display: inline-flex
@@ -1166,11 +1230,15 @@ table.rowResponsive tr td:first-child
         padding-bottom: padStd
     table.rowResponsive tbody td
         //display: block
-        flex-basis: 80%
+        font-size:85%
+        flex-basis: 100%
         text-align: left
         display: flex
         justify-content: space-between
-        padding: 0 padStd padXS padStd
+        padding: padM padStd padM padStd
+        border-bottom: 1px solid blackAlp10
+    table.rowResponsive tbody td:last-child
+        border-bottom: none
     table.rowResponsive tbody td:first-child
         flex-basis: 100%
         font-size: 1.2em
@@ -1254,6 +1322,10 @@ a.smallTeaser
     min-width: 23vw
     max-width: 23vw
     transition: 0.15s
+    @media phoneRule
+        min-width:auto
+        max-width:100%
+
 a.smallTeaser span
     display: block
     flex-grow: 0
@@ -1291,18 +1363,25 @@ a.smallTeaser p u
 @media (pointer: coarse)
     a.smallTeaser
         box-shadow: 0 0 10px 5px blackAlp10
-div.smallTeasers
-    display:flex
-    flex-wrap: wrap
-    justify-content: space-around
-    padding: 0 padXS padXXS
-    column-gap: marXS
-    row-gap: marXXS
+
+
 div.smallTeasers > a
-    min-width:90vw
-    max-width:90vw
-    margin:marXS 0
+        min-width:90vw
+        max-width:90vw
+        margin:marXS 0
+
+@media phoneRule
+   div.smallTeasers
+        padding: 5vw
 @media ttrigger
+
+    div.smallTeasers
+        display:flex
+        flex-wrap: wrap
+        justify-content: space-around
+        padding: 0 padXS padXXS
+        column-gap: marXS
+        row-gap: marXXS
     div.smallTeasers > a
         min-width:43vw
         max-width:43vw
@@ -1334,6 +1413,8 @@ div.smallTeasers > a
 .map.med
     width:100%
     height:42.5vh
+    @media phoneRule
+        margin: marL 0
 
 
 @media mtrigger
@@ -1356,6 +1437,10 @@ span.ctaButton
     margin-top:marXS
     margin-bottom: 0
     margin-top:auto
+    @media phoneRule
+        padding:padM padL
+        font-size: 1em
+        font-weight: 300
 body.home div.catList
     margin: marM auto marM auto
     padding: padXXS 0 padXXS 0
