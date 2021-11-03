@@ -945,22 +945,34 @@ div.containMNav {
   padding: 7vw 7vw;
 }
 div.containMNav > * {
-  margin-bottom: 10vw;
+  margin-bottom: 5vw;
 }
 div.containMNav nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -o-box-orient: vertical;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: distribute;
+  -o-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 div.containMNav nav a {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
   padding: 4.5vw 3vw;
-  line-height: 130%;
-  margin: 1px 0;
+  line-height: 120%;
+  font-size: 0.9em !important;
+  margin: 2px 0;
   background-color: rgba(0,0,0,0.05);
 }
 div.containMNav h6 {

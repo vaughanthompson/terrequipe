@@ -509,14 +509,18 @@ div.mblnavContainer
 div.containMNav
     padding: padXL padXL
 div.containMNav > *
-    margin-bottom: marXL
+    margin-bottom: marL
 div.containMNav nav
     display: flex
-    flex-direction: column
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
 div.containMNav nav a
+    flex-basis: 48%
     padding: padM*1.5 padM 
-    line-height: 130%
-    margin: 1px 0
+    line-height: 120%
+    font-size:0.9em !important
+    margin: 2px 0
     background-color: rgba(0,0,0,0.05)
 div.containMNav h6
     font-size: 1em
