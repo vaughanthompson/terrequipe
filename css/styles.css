@@ -1427,6 +1427,10 @@ picture.logoAsset {
 .tall picture.logoAsset {
   max-width: 60px;
 }
+.inpageLogo {
+  width: 150px;
+  margin-bottom: 1em;
+}
 header.sticky picture.logoAsset {
   max-width: 35px;
   max-height: 35px;
@@ -2119,7 +2123,8 @@ div.brandCarousel .slick-prev {
 div.brandCarousel .slick-next {
   right: -2vw;
 }
-div.slickBrands {
+div.slickBrands,
+div.slickBrandsHome {
   display: none;
 }
 @media screen and (max-width: 750px) {

@@ -178,13 +178,15 @@ html {
 }
 
 
-div.forms select {
+div.forms select,
+div.other__inputs input[type=text] {
   min-width: 50px;
   font-size:1em;
   line-height: 1.8em;
   font-weight: 300;
 }
-div.forms select {
+div.forms select,
+div.other__inputs input[type=text] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

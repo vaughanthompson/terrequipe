@@ -98,7 +98,31 @@
 
     $(".slickBrands").show();
 
+    $(".slickBrandsHome").slick({
+        autoplay: true,
+        autoplaySpeed:5000,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows:true,
+        dots:false,
+        fade:false,
+        speed:1000,
+        pauseOnHover:true,
+        responsive: [
+            {
+              breakpoint: 1100,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+              }
+            }
+        ]
+    });
 
+    $(".slickBrandsHome").show();
     
 
 
